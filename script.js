@@ -24,6 +24,7 @@ function drawDot() {
 setInterval(drawDot, 16);
 */
 //Spinning Square:
+/*
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const width = canvas.width;
@@ -37,8 +38,34 @@ function drawSquare() {
     ctx.translate(width / 2, height / 2);  
     ctx.rotate(angle * Math.PI / 180); 
     ctx.fillStyle = '#3498db'; 
-    ctx.fillRect(-50, -50, 100, 100); 
+    ctx.strokeRect(-50, -50, 100, 100); 
     ctx.restore();
     angle += 1;
+}
+setInterval(drawSquare, 16);
+*/
+//Combined
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const width = canvas.width;
+const height = canvas.height;
+let angle = 0;
+const speed = 5;
+let rad = 50;
+let x = 0;
+function drawSquare() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.save();
+    ctx.translate(x, height / 2);  
+    ctx.rotate(angle * Math.PI / 180); 
+    ctx.strokeRect(-50, -50, 100, 100); 
+    ctx.restore();
+    angle += 1;
+
+    x += speed;
+    if (x - rad > canvas.width) {
+        x = -rad;
+    }
 }
 setInterval(drawSquare, 16);
