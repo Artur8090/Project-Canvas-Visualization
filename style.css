@@ -1,5 +1,42 @@
+@font-face {
+    font-family: volkov;
+    src: url(fonts/Volkhov/Volkhov-Regular.ttf);
+}
+body{
+    background-color: #4169E1;
+}
 canvas{
-    border: 1px solid #696969;
-    margin-left: 35%;
+    background-color: #6495ED;
+    border: 5px solid #0041C2;
     margin-top: 5%;
+    float: right;
+    margin-right: 10%;
+    width: 600px;
+    height: 600px;
+}
+.input-area{
+    margin-left: 10%;
+    float: left;
+    margin-top: 5%;
+    background-color: #6495ED;
+    border: 5px solid #0041C2;
+    width: 600px;
+    height: 600px;
+    padding-left: 5%;
+}
+.input-area #title{
+    font-family: volkov;
+    font-size: 40px;
+    
+}
+.input-area .characteristic{
+    font-family: volkov;
+    font-size: 20px;
+}
+.input-area p{
+    margin: 0;
+}
+
+#size-input, #color-input, #speed-input{
+    margin-bottom: 40px;
 }
