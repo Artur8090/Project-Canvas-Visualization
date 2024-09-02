@@ -78,7 +78,7 @@ const canvas = document.getElementById('canvas');
         let speed = 5;
         let sideLength = 100;
         let halfSide = sideLength / 2;
-        let color = 'black';
+        let color = 'white';
         let x = 0;
         let intervalId = null;
 
@@ -102,6 +102,7 @@ const canvas = document.getElementById('canvas');
             });
 
             ctx.strokeStyle = color;
+            ctx.fillStyle = 'white';
             ctx.font = "20px Arial";
             ctx.beginPath();
             ctx.moveTo(corners[0].x, corners[0].y);

@@ -3,26 +3,29 @@
     src: url(fonts/Volkhov/Volkhov-Regular.ttf);
 }
 body{
-    background-color: #4169E1;
+    background-color: #161616;
+    color: beige;
 }
 canvas{
-    background-color: #6495ED;
-    border: 5px solid #0041C2;
+    background-color: #242424;
+    border: 1px solid #660000;
     margin-top: 5%;
     float: right;
-    margin-right: 10%;
-    width: 600px;
-    height: 600px;
+    margin-right: 5%;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
 }
 .input-area{
-    margin-left: 10%;
+    margin-left: 5%;
     float: left;
     margin-top: 5%;
-    background-color: #6495ED;
-    border: 5px solid #0041C2;
-    width: 600px;
-    height: 600px;
+    background-color: #242424;
+    border: 1px solid #660000;
+    width: 500px;
+    height: 500px;
     padding-left: 5%;
+    border-radius: 5px;
 }
 .input-area #title{
     font-family: volkov;
@@ -39,4 +42,13 @@ canvas{
 
 #size-input, #color-input, #speed-input{
     margin-bottom: 40px;
+}
+input{
+    background-color: #bc0000;
+    font-family: volkov;
+    box-shadow: -3px 3px #131313;
+}
+button{
+    background-color: #bc0000;
+    
 }
