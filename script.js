@@ -81,7 +81,11 @@ const canvas = document.getElementById('canvas');
         let color = 'white';
         let x = 0;
         let intervalId = null;
-
+        const toggle = $('.switch')
+        if(toggle.is(':checked') == false){
+            toggle.is(':checked') = true
+            console.log(toggle.is('checked'))
+        }
         function drawSquare() {
             ctx.clearRect(0, 0, width, height);
             ctx.save();
@@ -108,8 +112,11 @@ const canvas = document.getElementById('canvas');
             ctx.moveTo(corners[0].x, corners[0].y);
             for (let i = 1; i < corners.length; i++) {
                 ctx.lineTo(corners[i].x, corners[i].y);
-                ctx.fillText(`${Math.round(corners[i].x)} , ${Math.round(corners[i].y)}`, corners[i].x, corners[i].y);
-            }
+                if(toggle){
+                    ctx.fillText(`${Math.round(corners[i].x)} , ${Math.round(corners[i].y)}`, corners[i].x, corners[i].y);
+                }
+    
+}
             ctx.closePath();
             ctx.stroke();
 
@@ -120,6 +127,7 @@ const canvas = document.getElementById('canvas');
             if (x - halfSide > canvas.width) {
                 x = -halfSide;
             }
+            
         }
 
         function startDrawing() {

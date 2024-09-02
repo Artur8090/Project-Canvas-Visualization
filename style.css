@@ -64,15 +64,15 @@ button{
 #corner-pos{
     float: right;
     margin-right: 40%;
+    font-family: poppins;
 }
 .switch {
     float: right;
-    margin-right: 44%;
+    margin-right: 45%;
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-
   }
   
   .switch input {
